@@ -1,7 +1,6 @@
 package software.ulpgc.kata2;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -14,7 +13,7 @@ public class MapAxisElementBuilder implements AxisElementBuilder {
 
     @Override
     public List<AxisElement> build() {
-        List<AxisElement> elements = new ArrayList<AxisElement>();
+        List<AxisElement> elements = new ArrayList<>();
         for (Integer key : data.keySet()) {
             elements.add(new AxisElement(key, data.get(key)));
         }
