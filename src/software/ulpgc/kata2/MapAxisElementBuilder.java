@@ -15,9 +15,7 @@ public class MapAxisElementBuilder implements AxisElementBuilder {
     @Override
     public List<AxisElement> build() {
         List<AxisElement> elements = new ArrayList<AxisElement>();
-        ArrayList<Integer> keys = new ArrayList<>(data.keySet());
-        Collections.sort(keys);
-        for (Integer key : keys) {
+        for (Integer key : data.keySet()) {
             elements.add(new AxisElement(key, data.get(key)));
         }
         return elements;
